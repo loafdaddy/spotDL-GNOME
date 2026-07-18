@@ -57,12 +57,17 @@ ______________________________________________________________________
 ## Install
 
 The app is distributed as a Flatpak that you build locally. You need `flatpak` and
-`flatpak-builder` installed, plus the GNOME runtime.
+`flatpak-builder` installed; the build script pulls in the GNOME runtime for you.
 
 ```bash
+# One-time: install Flatpak tooling (Fedora)
+sudo dnf install -y flatpak flatpak-builder
+# Debian/Ubuntu: sudo apt install -y flatpak flatpak-builder
+# Arch:          sudo pacman -S --needed flatpak flatpak-builder
+
 # One-time: add Flathub and install the GNOME runtime/SDK
 flatpak remote-add --if-not-exists --user flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install --user flathub org.gnome.Platform//48 org.gnome.Sdk//48
+flatpak install --user flathub org.gnome.Platform//50 org.gnome.Sdk//50
 
 # Build and install spotDL
 git clone https://github.com/loafdaddy/spotify-downloader && cd spotify-downloader
