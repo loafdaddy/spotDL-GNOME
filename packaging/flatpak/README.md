@@ -25,7 +25,7 @@ sudo dnf install flatpak flatpak-builder   # Fedora
 ```
 
 `build.sh` adds the Flathub remote (per user), installs the
-`org.gnome.Platform` / `org.gnome.Sdk` runtime version `50`, then builds and
+`org.gnome.Platform` / `org.gnome.Sdk` runtime version `48`, then builds and
 installs the app into the per-user Flatpak installation.
 
 Run it afterwards with:

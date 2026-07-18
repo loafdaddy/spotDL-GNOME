@@ -1,0 +1,49 @@
+name: Build Flatpak bundle
+
+# Builds a single-file `.flatpak` bundle so users can download and install the
+# app without needing the ~820 MB GNOME SDK or building from source.
+#
+# - Push a tag like `v4.5.0` to build the bundle AND attach it to the matching
+#   GitHub Release.
+# - Or trigger manually ("Run workflow") to just build and grab the bundle from
+#   the run's artifacts.
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  flatpak:
+    name: Build & bundle
+    runs-on: ubuntu-latest
+    container:
+      # Matches runtime-version '48' in the Flatpak manifest.
+      image: ghcr.io/flathub-infra/flatpak-github-actions:gnome-48
+      options: --privileged
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build Flatpak bundle
+        uses: flatpak/flatpak-github-actions/flatpak-builder@v6
+        with:
+          bundle: io.github.loafdaddy.SpotdlGnome.flatpak
+          manifest-path: packaging/flatpak/io.github.loafdaddy.SpotdlGnome.yml
+          cache-key: flatpak-builder-${{ github.sha }}
+
+      - name: Upload bundle as workflow artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: SpotdlGnome-flatpak
+          path: io.github.loafdaddy.SpotdlGnome.flatpak
+
+      - name: Attach bundle to release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: io.github.loafdaddy.SpotdlGnome.flatpak

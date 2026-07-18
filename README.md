@@ -56,8 +56,25 @@ ______________________________________________________________________
 
 ## Install
 
-The app is distributed as a Flatpak that you build locally. You need `flatpak` and
-`flatpak-builder` installed; the build script pulls in the GNOME runtime for you.
+### Option 1: Download a release (recommended)
+
+Grab the prebuilt `io.github.loafdaddy.SpotdlGnome.flatpak` from the
+[latest release](https://github.com/loafdaddy/spotDL-GNOME/releases/latest) and install it.
+This only pulls the ~410 MB GNOME **runtime** (shared with other Flatpak apps) — no 820 MB
+SDK and no building.
+
+```bash
+# One-time: make sure Flatpak + Flathub are set up
+sudo dnf install -y flatpak          # Debian/Ubuntu: sudo apt install -y flatpak | Arch: sudo pacman -S flatpak
+flatpak remote-add --if-not-exists --user flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+# Install the downloaded bundle
+flatpak install --user ./io.github.loafdaddy.SpotdlGnome.flatpak
+```
+
+### Option 2: Build from source
+
+You need `flatpak` and `flatpak-builder`; the build script pulls in the GNOME runtime for you.
 
 ```bash
 # One-time: install Flatpak tooling (Fedora)
@@ -65,12 +82,8 @@ sudo dnf install -y flatpak flatpak-builder
 # Debian/Ubuntu: sudo apt install -y flatpak flatpak-builder
 # Arch:          sudo pacman -S --needed flatpak flatpak-builder
 
-# One-time: add Flathub and install the GNOME runtime/SDK
-flatpak remote-add --if-not-exists --user flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install --user flathub org.gnome.Platform//50 org.gnome.Sdk//50
-
 # Build and install spotDL
-git clone https://github.com/loafdaddy/spotify-downloader && cd spotify-downloader
+git clone https://github.com/loafdaddy/spotDL-GNOME && cd spotDL-GNOME
 ./packaging/flatpak/build.sh
 ```
 
