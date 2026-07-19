@@ -48,6 +48,15 @@
   <content_rating type="oars-1.1"/>
 
   <releases>
+    <release version="0.2.1" date="2026-07-19">
+      <description>
+        <p>Flatpak runtime update to GNOME 50.</p>
+        <ul>
+          <li>Bump org.gnome.Platform / Sdk from EOL 48 to 50</li>
+          <li>CI Flatpak builder image updated to gnome-50</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.2.0" date="2026-07-19">
       <description>
         <p>Branding, docs, and Cadence-aligned release process.</p>

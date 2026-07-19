@@ -11,7 +11,7 @@
 set -euo pipefail
 
 APP_ID="io.github.loafdaddy.SpotdlGnome"
-RUNTIME_VERSION="48"
+RUNTIME_VERSION="50"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 MANIFEST="${SCRIPT_DIR}/${APP_ID}.yml"
 BUILD_DIR="${SCRIPT_DIR}/build-dir"

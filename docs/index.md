@@ -3,7 +3,7 @@
 **A native GNOME desktop app for downloading music from Spotify**  
 GTK4 · libadwaita · Flatpak · Linux
 
-[v0.2.0](https://github.com/loafdaddy/spotDL-GNOME/releases/tag/v0.2.0)
+[v0.2.1](https://github.com/loafdaddy/spotDL-GNOME/releases/tag/v0.2.1)
 ·
 [Release history](RELEASES.md)
 ·

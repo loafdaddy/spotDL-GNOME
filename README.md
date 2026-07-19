@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/loafdaddy/spotDL-GNOME/releases/tag/v0.2.0">v0.2.0</a>
+  <a href="https://github.com/loafdaddy/spotDL-GNOME/releases/tag/v0.2.1">v0.2.1</a>
   ·
   <a href="docs/RELEASES.md">Release history</a>
   ·

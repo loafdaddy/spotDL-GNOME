@@ -22,8 +22,8 @@ jobs:
     name: Build & bundle
     runs-on: ubuntu-latest
     container:
-      # Matches runtime-version '48' in the Flatpak manifest.
-      image: ghcr.io/flathub-infra/flatpak-github-actions:gnome-48
+      # Matches runtime-version '50' in the Flatpak manifest.
+      image: ghcr.io/flathub-infra/flatpak-github-actions:gnome-50
       options: --privileged
     steps:
       - name: Checkout
