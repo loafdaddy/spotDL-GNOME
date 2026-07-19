@@ -122,3 +122,5 @@ fail-under = 9
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
 markers = ["vcr"]
+testpaths = ["tests"]
+norecursedirs = [".git", ".venv", ".flatpak-builder", "site", "packaging", "*.egg"]

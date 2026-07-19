@@ -5,11 +5,7 @@ on: [push, pull_request]
 jobs:
   test-vcr:
     if: "!contains(github.event.commits[0].message, '[skip ci]')"
-    runs-on: ${{ matrix.platform }}
-    strategy:
-      # max-parallel: 1
-      matrix:
-        platform: [ubuntu-latest, macos-13, windows-latest]
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v3
@@ -36,28 +32,23 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Run tests
-        timeout-minutes: 10
+        timeout-minutes: 15
         run: |
-          uv run pytest -vvv --record-mode=new_episodes --ignore tests/test_matching.py --ignore tests/utils/test_ffmpeg.py --ignore tests/utils/test_metadata.py --ignore tests/providers/lyrics/test_azlyrics.py --ignore tests/providers/lyrics/test_musixmatch.py --ignore tests/providers/audio/test_youtube.py --ignore tests/console/test_entry_point.py --ignore tests/test_init.py
+          uv run pytest -vvv tests --record-mode=new_episodes --ignore tests/test_matching.py --ignore tests/utils/test_ffmpeg.py --ignore tests/utils/test_metadata.py --ignore tests/providers/lyrics/test_azlyrics.py --ignore tests/providers/lyrics/test_musixmatch.py --ignore tests/providers/audio/test_youtube.py --ignore tests/console/test_entry_point.py --ignore tests/test_init.py
         env:
-          PLATFORM: ${{ matrix.platform }}
+          PLATFORM: ubuntu-latest
 
   test:
     if: "!contains(github.event.commits[0].message, '[skip ci]')"
-    runs-on: ${{ matrix.platform }}
-    strategy:
-      # max-parallel: 3
-      matrix:
-        platform: [ubuntu-latest, macos-13, windows-latest]
-        python-version: ["3.11"]
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v3
 
-      - name: Set up Python ${{ matrix.python-version }}
+      - name: Set up Python 3.11
         uses: actions/setup-python@v4
         with:
-          python-version: ${{ matrix.python-version }}
+          python-version: "3.11"
 
       - name: Install uv
         uses: astral-sh/setup-uv@v5
@@ -67,7 +58,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          uv venv --python ${{ matrix.python-version }}
+          uv venv --python 3.11
           uv pip install pip setuptools
           uv sync
 
@@ -77,15 +68,15 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Run tests
-        timeout-minutes: 10
+        timeout-minutes: 15
         run: |
-          uv run pytest -vvv --record-mode=none --disable-recording --ignore tests/providers/lyrics --ignore tests/utils/test_github.py --ignore tests/utils/test_ffmpeg.py --ignore tests/utils/test_metadata.py --ignore tests/test_matching.py --ignore tests/providers/audio/test_youtube.py --ignore tests/console/test_entry_point.py --ignore tests/test_init.py
+          uv run pytest -vvv tests --record-mode=none --disable-recording --ignore tests/providers/lyrics --ignore tests/utils/test_github.py --ignore tests/utils/test_ffmpeg.py --ignore tests/utils/test_metadata.py --ignore tests/test_matching.py --ignore tests/providers/audio/test_youtube.py --ignore tests/console/test_entry_point.py --ignore tests/test_init.py
         env:
-          PLATFORM: ${{ matrix.platform }}
+          PLATFORM: ubuntu-latest
 
   matching:
     if: "!contains(github.event.commits[0].message, '[skip ci]')"
-    runs-on: "ubuntu-latest"
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v3
@@ -112,6 +103,6 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Run tests
-        timeout-minutes: 10
+        timeout-minutes: 15
         run: |
           uv run pytest -vvv --record-mode=none --disable-recording tests/test_matching.py

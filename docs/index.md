@@ -1,157 +1,90 @@
+# spotDL.
 
-<!--- mdformat-toc start --slug=github --->
+**A native GNOME desktop app for downloading music from Spotify**  
+GTK4 · libadwaita · Flatpak · Linux
 
-<!---
-!!! IF EDITING THE README, ENSURE TO COPY THE WHOLE FILE TO index.md in `/docs/` AND REMOVE THE REFERENCES TO ReadTheDocs THERE.
-!!! ENSURE TO UPDATE LINKS AND REMOVE HTML FORMATTING
---->
+[v0.1.0](https://github.com/loafdaddy/spotDL-GNOME/releases/tag/v0.1.0)
+·
+[Contributing](CONTRIBUTING.md)
+·
+[Play with Cadence](https://github.com/loafdaddy/Cadence-Music)
 
-# spotDL v4
+spotDL finds songs from your Spotify tracks, albums, and playlists on YouTube and downloads them — complete with album art, lyrics, and metadata. This is a Linux fork that wraps the [spotDL](https://github.com/spotDL/spotify-downloader) engine in a native **GTK 4 / libadwaita** interface, packaged as a self-contained **Flatpak**.
 
-**spotDL** finds songs from Spotify playlists on YouTube and downloads them - along with album art, lyrics and metadata.
+This aims to feel like it ships with Fedora Workstation: Wayland-first, Flatpak-friendly, no Electron.
 
-[![MIT License](https://img.shields.io/github/license/spotdl/spotify-downloader?color=44CC11&style=flat-square)](https://github.com/spotDL/spotify-downloader/blob/master/LICENSE)
-[![PyPI version](https://img.shields.io/pypi/pyversions/spotDL?color=%2344CC11&style=flat-square)](https://pypi.org/project/spotdl/)
-[![PyPi downloads](https://img.shields.io/pypi/dw/spotDL?label=downloads@pypi&color=344CC11&style=flat-square)](https://pypi.org/project/spotdl/)
-![Contributors](https://img.shields.io/github/contributors/spotDL/spotify-downloader?style=flat-square)
-[![Discord](https://img.shields.io/discord/771628785447337985?label=discord&logo=discord&style=flat-square)](https://discord.gg/xCa23pwJWY)
+> Paste a Spotify link → download organised files → play them in [Cadence](https://github.com/loafdaddy/Cadence-Music).
 
-> spotDL: The fastest, easiest and most accurate command-line music downloader.
+## AI disclaimer
 
+Parts of this fork — including the GTK GUI, Flatpak packaging, docs, and branding — have been written or edited with **AI assistance** (for example Cursor and similar tools). That is intentional for an early project moving quickly. The upstream spotDL engine remains the work of the [spotDL project](https://github.com/spotDL/spotify-downloader) and its contributors.
 
-## Installation
+**AI-assisted contributions are welcome.** Use Cursor, Copilot, ChatGPT, Claude, or any other assistant if it helps you. You remain responsible for what you submit: understand the change, keep pull requests focused, and verify what you can.
 
-Refer to our [Installation Guide](installation.md) for more details.
+Full expectations: [Contributing — AI-assisted contributions](CONTRIBUTING.md#ai-assisted-contributions).
 
-### Python (Recommended Method)
+## Try it
 
-- _spotDL_ can be installed by running `pip install spotdl`.
-- To update spotDL run `pip install --upgrade spotdl`
+### Flatpak (recommended)
 
-  > On some systems you might have to change `pip` to `pip3`.
+Grab the prebuilt bundle from the
+[latest release](https://github.com/loafdaddy/spotDL-GNOME/releases/latest):
 
-### Other options
-
-- Prebuilt executable
-    - Download the latest version from the [Releases Tab](https://github.com/spotDL/spotify-downloader/releases).
-- On Termux
-    - `curl -L https://raw.githubusercontent.com/spotDL/spotify-downloader/master/scripts/termux.sh | sh`
-- Arch
-    - There is an [Arch User Repository (AUR) package](https://aur.archlinux.org/packages/spotdl/) for spotDL.
-- Docker
-    - Build image:
-
-      ```bash
-      docker build -t spotdl .
-      ```
-
-    - Launch container with spotDL parameters (see section below). You need to create mapped
-      volume to access song files
-
-      ```bash
-      docker run --rm -v $(pwd):/music spotdl download [trackUrl]
-      ```
-
-      If you bind-mount `$(pwd):/music`, that host directory must be writable by the container
-      `UID`/`GID`.
-
-    - Use Docker Compose if you want Docker to manage permissions for you:
-
-      ```bash
-      # Set your user ID and group ID (recommended)
-      # This ensures downloaded files are owned by your user instead of root
-      # If you don't set this, files will be owned by user 1000
-      export PUID=$(id -u)
-      export PGID=$(id -g)
-
-      # Build and download
-      docker compose build
-      docker compose run --rm spotdl download [trackUrl]
-      ```
-
-      Docker Compose mounts `spotdl_music:/music` and stores downloads in that volume.
-      Export files:
-
-      ```bash
-      docker compose up --no-start spotdl
-      mkdir -p downloads
-      docker compose cp spotdl:/music/. ./downloads/
-      ```
-
-- Build from source
-
-    ```bash
-    git clone https://github.com/spotDL/spotify-downloader && cd spotify-downloader
-    pip install uv
-    uv sync
-    uv run scripts/build.py
-    ```
-
-    An executable is created in `spotify-downloader/dist/`.
-
-### Installing FFmpeg
-
-FFmpeg is required for spotDL. If using FFmpeg only for spotDL, you can simply install FFmpeg to your spotDL installation directory:
-`spotdl --download-ffmpeg`
-
-We recommend the above option, but if you want to install FFmpeg system-wide,
-follow these instructions
-
-- [Windows Tutorial](https://windowsloop.com/install-ffmpeg-windows-10/)
-- OSX - `brew install ffmpeg`
-- Linux - `sudo apt install ffmpeg` or use your distro's package manager
-
-## Usage
-
-Using SpotDL without options:
-
-```sh
-spotdl [urls]
+```bash
+sudo dnf install -y flatpak
+flatpak remote-add --if-not-exists --user flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak install --user ./io.github.loafdaddy.SpotdlGnome.flatpak
+flatpak run io.github.loafdaddy.SpotdlGnome
 ```
 
-You can run _spotDL_ as a package if running it as a script doesn't work:
+### Build from source
 
-```sh
-python -m spotdl [urls]
+```bash
+sudo dnf install -y flatpak flatpak-builder
+git clone https://github.com/loafdaddy/spotDL-GNOME.git
+cd spotDL-GNOME
+./packaging/flatpak/build.sh
 ```
 
-General usage:
+See also [Installation](installation.md) for CLI-oriented notes inherited from upstream.
 
-```sh
-spotdl [operation] [options] QUERY
-```
+## Play your downloads
 
-There are different **operations** spotDL can perform. The _default_ is `download`, which simply downloads the songs from YouTube and embeds metadata.
+spotDL does not play music. Use **[Cadence](https://github.com/loafdaddy/Cadence-Music)** — a modern native Linux music library — pointed at your download folder.
 
-The **query** for spotDL is usually a list of Spotify URLs, but for some operations like **sync**, only a single link or file is required.
-For a list of all **options** use ```spotdl -h```
+## What works today
 
-### Refer to [Usage](usage.md) for more info.
+- Paste a Spotify track, album, or playlist URL and download
+- Live progress and helpful errors with per-track retry
+- Automatic backup audio sources
+- Organised folders and download history
+- Format / bitrate / lyrics preferences
+- FFmpeg and Deno bundled in the Flatpak
 
-## Music Sourcing and Audio Quality
+## Known limitations
 
-spotDL uses YouTube as a source for music downloads. This method is used to avoid any issues related to downloading music from Spotify.
-
-> **Note**
-> Users are responsible for their actions and potential legal consequences. We do not support unauthorized downloading of copyrighted material and take no responsibility for user actions.
-
-### Audio Quality
-
-spotDL downloads music from YouTube and is designed to always download the highest possible bitrate; which is 128 kbps for regular users and 256 kbps for YouTube Music premium users.
-
-Check the [Audio Formats](usage.md#audio-formats-and-quality) page for more info.
+- Free-text name search is experimental; paste a Spotify link for reliable results
+- This fork targets Linux / Flatpak only
 
 ## Contributing
 
-Interested in contributing? Check out our [CONTRIBUTING.md](CONTRIBUTING.md) to find
-resources around contributing along with a guide on how to set up a development environment.
+1. Read [Contributing](CONTRIBUTING.md)
+2. Open an issue for bugs or ideas
+3. Fork, branch from `main`, open a PR
 
-### Join our amazing community as a code contributor
+AI-assisted PRs are welcome under the expectations in Contributing.
 
-<a href="https://github.com/spotDL/spotify-downloader/graphs/contributors">
-  <img class="dark-light" src="https://contrib.rocks/image?repo=spotDL/spotify-downloader&anon=0&columns=25&max=100&r=true" />
-</a>
+## Music sourcing & legal
+
+spotDL uses YouTube (and backup sources) for downloads.
+
+> **Note**
+> Users are responsible for their actions and any potential legal consequences. We do not support unauthorised downloading of copyrighted material and take no responsibility for user actions.
+
+## Credits
+
+Built on [spotDL](https://github.com/spotDL/spotify-downloader). Sibling player: [Cadence](https://github.com/loafdaddy/Cadence-Music).
 
 ## License
 
-This project is Licensed under the [MIT](https://github.com/spotDL/spotify-downloader/blob/master/LICENSE) License.
+[MIT](https://github.com/loafdaddy/spotDL-GNOME/blob/main/LICENSE)

@@ -1,9 +1,9 @@
-site_name: spotDL
-site_description: Download your Spotify playlists and songs along with album art and metadata
-site_author: xnetcat
-site_url: "https://spotdl.github.io/spotify-downloader"
-repo_url: "https://github.com/spotDL/spotify-downloader"
-repo_name: "spotdl/spotify-downloader"
+site_name: spotDL GNOME
+site_description: Native GNOME desktop app for downloading music from Spotify
+site_author: loafdaddy
+site_url: "https://github.com/loafdaddy/spotDL-GNOME"
+repo_url: "https://github.com/loafdaddy/spotDL-GNOME"
+repo_name: "loafdaddy/spotDL-GNOME"
 site_dir: "site"
 
 nav:

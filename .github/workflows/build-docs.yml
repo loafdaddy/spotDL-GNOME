@@ -1,13 +1,13 @@
-name: Deploy docs to GitHub pages
+name: Build docs
 
 on:
   push:
-    # branches to consider in the event; optional, defaults to all
     branches:
-      - master
+      - main
+  pull_request:
 
 jobs:
-  deploy:
+  build:
     if: "!contains(github.event.commits[0].message, '[skip ci]')"
     runs-on: ubuntu-latest
 
@@ -33,6 +33,7 @@ jobs:
           uv venv --python 3.10
           uv sync
 
-      - name: Build and deploy
+      # Build only: this fork does not publish GitHub Pages (no gh-pages / Pages site).
+      - name: Build docs
         run: |
-          uv run mkdocs gh-deploy --force
+          uv run mkdocs build --strict

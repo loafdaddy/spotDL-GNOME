@@ -1,4 +1,6 @@
 [MASTER]
+# PyGObject is provided by the system/Flatpak runtime, not the CI venv.
+ignored-modules=gi,gi.repository
 disable=
     R0902, # too-many-instance-attributes
     R0913, # too-many-arguments
