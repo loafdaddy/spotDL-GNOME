@@ -161,7 +161,7 @@ class SpotdlWindow(Adw.ApplicationWindow):
     def __init__(self, **kwargs: Any) -> None:
         super().__init__(**kwargs)
 
-        self.set_title("spotDL GNOME")
+        self.set_title("spotDL")
         self.set_default_size(900, 720)
 
         self.manager = DownloadManager()
@@ -304,11 +304,12 @@ class SpotdlWindow(Adw.ApplicationWindow):
 
     def _build_empty_state(self) -> Gtk.Widget:
         status_page = Adw.StatusPage()
-        status_page.set_icon_name("folder-music-symbolic")
-        status_page.set_title("Download music from Spotify")
+        status_page.set_icon_name("io.github.loafdaddy.SpotdlGnome")
+        status_page.set_title("spotDL.")
         status_page.set_description(
             "Paste a Spotify track, album, or playlist link \u2014 "
-            "or search by name \u2014 then press Download."
+            "or search by name \u2014 then press Download.\n"
+            "Play finished downloads in Cadence."
         )
         return status_page
 
@@ -370,11 +371,13 @@ class SpotdlWindow(Adw.ApplicationWindow):
         mark_welcomed()
 
         dialog = Adw.AlertDialog(
-            heading="Welcome to spotDL GNOME",
+            heading="Welcome to spotDL.",
             body=(
                 "Before your first download, choose where music is saved and set "
                 "your format, quality, and how downloads are organised into "
-                "folders.\n\nYou can change these any time from the menu."
+                "folders.\n\n"
+                "When you are done downloading, open Cadence to play your library.\n\n"
+                "You can change preferences any time from the menu."
             ),
         )
         dialog.add_response("later", "Not Now")

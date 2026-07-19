@@ -15,6 +15,7 @@ nav:
 - Development:
   - Code Of Conduct: CODE_OF_CONDUCT.md
   - Contributing: CONTRIBUTING.md
+  - Releases: RELEASES.md
 - Code Reference: reference/
 
 theme:

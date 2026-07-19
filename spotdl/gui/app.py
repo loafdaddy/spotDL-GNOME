@@ -18,10 +18,12 @@ from spotdl.gui.window import SpotdlWindow  # noqa: E402
 
 logger = logging.getLogger(__name__)
 
-__all__ = ["SpotdlApplication", "APP_ID", "APP_NAME"]
+__all__ = ["SpotdlApplication", "APP_ID", "APP_NAME", "APP_VERSION"]
 
 APP_ID = "io.github.loafdaddy.SpotdlGnome"
-APP_NAME = "spotDL GNOME"
+APP_NAME = "spotDL"
+# Fork / Flatpak release version (engine version remains spotdl.__version__).
+APP_VERSION = "0.2.0"
 
 
 class SpotdlApplication(Adw.Application):
@@ -70,17 +72,21 @@ class SpotdlApplication(Adw.Application):
         about = Adw.AboutDialog(
             application_name=APP_NAME,
             application_icon=APP_ID,
-            version=__version__,
+            version=f"{APP_VERSION} (engine {__version__})",
             developer_name="loafdaddy",
-            website="https://github.com/loafdaddy/spotify-downloader",
-            issue_url="https://github.com/loafdaddy/spotify-downloader/issues",
+            website="https://github.com/loafdaddy/spotDL-GNOME",
+            issue_url="https://github.com/loafdaddy/spotDL-GNOME/issues",
             license_type=Gtk.License.MIT_X11,
             comments=(
-                "A native GTK/libadwaita desktop app for Linux that downloads "
-                "music from Spotify, built on the spotDL engine."
+                "A native GTK4 / libadwaita desktop app for Linux that downloads "
+                "music from Spotify. Built on the spotDL engine. Play downloads "
+                "with Cadence."
             ),
         )
         about.add_credit_section(
             "Based on", ["spotDL https://github.com/spotDL/spotify-downloader"]
+        )
+        about.add_credit_section(
+            "Play with", ["Cadence https://github.com/loafdaddy/Cadence-Music"]
         )
         about.present(self.window)

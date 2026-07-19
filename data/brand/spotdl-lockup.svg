@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="640" height="160" viewBox="0 0 640 160" role="img" aria-label="spotDL.">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="160" viewBox="0 0 720 160" role="img" aria-label="spotDL.">
   <defs>
     <linearGradient id="bg" x1="18%" y1="0%" x2="82%" y2="100%">
       <stop offset="0%" stop-color="#163528"/>
@@ -24,7 +24,7 @@
     <polyline points="54,54 64,64 74,54" fill="none" stroke="#F4FFF8" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
 
-  <!-- Wordmark -->
+  <!-- Wordmark: period spaced like Cadence. (period after the name, not tight) -->
   <text
     x="168"
     y="102"
@@ -34,7 +34,7 @@
     font-weight="600"
     letter-spacing="1.5">spotDL</text>
   <text
-    x="412"
+    x="478"
     y="102"
     fill="#22D662"
     font-family="Iowan Old Style, Palatino Linotype, Palatino, Book Antiqua, Georgia, serif"

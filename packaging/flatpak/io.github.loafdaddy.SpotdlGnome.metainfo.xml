@@ -2,8 +2,8 @@
 <component type="desktop-application">
   <id>io.github.loafdaddy.SpotdlGnome</id>
 
-  <name>spotDL GNOME</name>
-  <summary>Download music from Spotify</summary>
+  <name>spotDL</name>
+  <summary>Native GNOME app for downloading music from Spotify</summary>
 
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>MIT</project_license>
@@ -14,7 +14,7 @@
 
   <description>
     <p>
-      spotDL GNOME is a native GTK4 / libadwaita desktop app for Linux that
+      spotDL is a native GTK4 / libadwaita desktop app for Linux that
       finds songs from your Spotify tracks, albums and playlists and downloads
       matching audio from YouTube, together with album art, lyrics and metadata.
     </p>
@@ -29,8 +29,8 @@
       <li>Optional synced lyrics (.lrc)</li>
     </ul>
     <p>
-      It is built on the spotDL command line engine. FFmpeg and Deno are
-      bundled, so no additional dependencies are required.
+      Built on the spotDL command line engine. FFmpeg and Deno are bundled.
+      Play downloads with Cadence, a sibling native Linux music library.
     </p>
   </description>
 
@@ -41,12 +41,24 @@
     <category>Audio</category>
   </categories>
 
-  <url type="homepage">https://github.com/loafdaddy/spotify-downloader</url>
-  <url type="bugtracker">https://github.com/loafdaddy/spotify-downloader/issues</url>
+  <url type="homepage">https://github.com/loafdaddy/spotDL-GNOME</url>
+  <url type="bugtracker">https://github.com/loafdaddy/spotDL-GNOME/issues</url>
+  <url type="contribute">https://github.com/loafdaddy/spotDL-GNOME/blob/main/CONTRIBUTING.md</url>
 
   <content_rating type="oars-1.1"/>
 
   <releases>
+    <release version="0.2.0" date="2026-07-19">
+      <description>
+        <p>Branding, docs, and Cadence-aligned release process.</p>
+        <ul>
+          <li>spotDL. wordmark and updated app icon</li>
+          <li>In-app branding (home, welcome, About)</li>
+          <li>AI-friendly contributing guide and Cadence player link</li>
+          <li>Default branch renamed to main; Linux-focused CI</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.1.0" date="2026-07-18">
       <description>
         <p>Initial release: native GTK4 / libadwaita desktop GUI packaged as a Flatpak.</p>
