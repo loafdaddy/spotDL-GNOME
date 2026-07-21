@@ -8,14 +8,22 @@ site_dir: "site"
 
 nav:
 - Home: index.md
-- Installation: installation.md
+- Docs index: README.md
+- Setup: SETUP.md
+- Configuration: CONFIGURATION.md
+- FAQ: FAQ.md
+- Architecture: ARCHITECTURE.md
 - Usage:
   - Usage examples: usage.md
   - Troubleshooting: troubleshooting.md
+  - CLI installation notes: installation.md
 - Development:
-  - Code Of Conduct: CODE_OF_CONDUCT.md
+  - Development: DEVELOPMENT.md
   - Contributing: CONTRIBUTING.md
+  - Code Of Conduct: CODE_OF_CONDUCT.md
   - Releases: RELEASES.md
+  - Roadmap: ROADMAP.md
+  - TODO: TODO.md
 - Code Reference: reference/
 
 theme:
@@ -30,14 +38,14 @@ theme:
   - media: "(prefers-color-scheme: light)"
     scheme: default
     primary: teal
-    accent: purple
+    accent: green
     toggle:
       icon: material/weather-sunny
       name: Switch to dark mode
   - media: "(prefers-color-scheme: dark)"
     scheme: slate
     primary: black
-    accent: lime
+    accent: light green
     toggle:
       icon: material/weather-night
       name: Switch to light mode

@@ -23,6 +23,8 @@ from spotdl.gui.backend import (  # noqa: E402
     EVENT_STATUS,
     DownloadManager,
 )
+from spotdl.gui.branding import load_mark_paintable  # noqa: E402
+from spotdl.gui.identity import APP_ID, APP_NAME  # noqa: E402
 from spotdl.gui.settings import (  # noqa: E402
     build_downloader_settings,
     is_first_run,
@@ -161,7 +163,7 @@ class SpotdlWindow(Adw.ApplicationWindow):
     def __init__(self, **kwargs: Any) -> None:
         super().__init__(**kwargs)
 
-        self.set_title("spotDL")
+        self.set_title(f"{APP_NAME}.")
         self.set_default_size(900, 720)
 
         self.manager = DownloadManager()
@@ -253,7 +255,7 @@ class SpotdlWindow(Adw.ApplicationWindow):
 
         menu = Gio.Menu()
         menu.append("Preferences", "app.preferences")
-        menu.append("About spotDL", "app.about")
+        menu.append(f"About {APP_NAME}.", "app.about")
         menu_button = Gtk.MenuButton()
         menu_button.set_icon_name("open-menu-symbolic")
         menu_button.set_menu_model(menu)
@@ -287,6 +289,7 @@ class SpotdlWindow(Adw.ApplicationWindow):
 
         self.download_button = Gtk.Button(label="Download")
         self.download_button.add_css_class("suggested-action")
+        self.download_button.add_css_class("spotdl-suggested")
         self.download_button.connect("clicked", self._on_download_clicked)
         search_box.append(self.download_button)
 
@@ -304,13 +307,17 @@ class SpotdlWindow(Adw.ApplicationWindow):
 
     def _build_empty_state(self) -> Gtk.Widget:
         status_page = Adw.StatusPage()
-        status_page.set_icon_name("io.github.loafdaddy.SpotdlGnome")
-        status_page.set_title("spotDL.")
+        status_page.set_title(f"{APP_NAME}.")
         status_page.set_description(
             "Paste a Spotify track, album, or playlist link \u2014 "
             "or search by name \u2014 then press Download.\n"
             "Play finished downloads in Cadence."
         )
+        paintable = load_mark_paintable(128)
+        if paintable is not None and hasattr(status_page, "set_paintable"):
+            status_page.set_paintable(paintable)
+        else:
+            status_page.set_icon_name(APP_ID)
         return status_page
 
     def _build_loading_state(self) -> Gtk.Widget:
@@ -371,7 +378,7 @@ class SpotdlWindow(Adw.ApplicationWindow):
         mark_welcomed()
 
         dialog = Adw.AlertDialog(
-            heading="Welcome to spotDL.",
+            heading=f"Welcome to {APP_NAME}.",
             body=(
                 "Before your first download, choose where music is saved and set "
                 "your format, quality, and how downloads are organised into "

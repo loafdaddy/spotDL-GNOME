@@ -6,17 +6,26 @@
       <stop offset="55%" stop-color="#0F241C"/>
       <stop offset="100%" stop-color="#0A1612"/>
     </linearGradient>
+    <linearGradient id="ring" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7AEEA0"/>
+      <stop offset="45%" stop-color="#22D662"/>
+      <stop offset="100%" stop-color="#149A45"/>
+    </linearGradient>
+    <linearGradient id="hand" x1="30%" y1="10%" x2="70%" y2="90%">
+      <stop offset="0%" stop-color="#F4FFF8"/>
+      <stop offset="100%" stop-color="#C8F5D8"/>
+    </linearGradient>
   </defs>
   <rect width="128" height="128" rx="30" fill="url(#bg)"/>
-  <circle cx="64" cy="64" r="42" fill="#22D662" opacity="0.12"/>
-  <circle cx="64" cy="64" r="36" fill="none" stroke="#22D662" stroke-width="8"/>
+  <circle cx="64" cy="64" r="44" fill="#22D662" opacity="0.08"/>
+  <circle cx="64" cy="64" r="36" fill="none" stroke="url(#ring)" stroke-width="8"/>
   <path
     fill="none"
-    stroke="#F4FFF8"
+    stroke="url(#hand)"
     stroke-width="8"
     stroke-linecap="round"
     stroke-linejoin="round"
     d="M64 34a30 30 0 1 1-21.2 8.8"/>
-  <line x1="64" y1="34" x2="64" y2="64" stroke="#F4FFF8" stroke-width="8" stroke-linecap="round"/>
-  <polyline points="54,54 64,64 74,54" fill="none" stroke="#F4FFF8" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="64" y1="34" x2="64" y2="64" stroke="url(#hand)" stroke-width="8" stroke-linecap="round"/>
+  <polyline points="54,54 64,64 74,54" fill="none" stroke="url(#hand)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

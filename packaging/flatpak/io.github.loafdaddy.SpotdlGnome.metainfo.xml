@@ -2,7 +2,7 @@
 <component type="desktop-application">
   <id>io.github.loafdaddy.SpotdlGnome</id>
 
-  <name>spotDL</name>
+  <name>spotDL.</name>
   <summary>Native GNOME app for downloading music from Spotify</summary>
 
   <metadata_license>CC0-1.0</metadata_license>

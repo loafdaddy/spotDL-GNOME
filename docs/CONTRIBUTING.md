@@ -2,7 +2,9 @@
 
 Thanks for considering a contribution. This is a Linux/Flatpak fork of [spotDL](https://github.com/spotDL/spotify-downloader) with a native GTK GUI.
 
-The full guide lives in the repository root: **[CONTRIBUTING.md](https://github.com/loafdaddy/spotDL-GNOME/blob/main/CONTRIBUTING.md)**.
+The full guide lives in the repository root: **[CONTRIBUTING.md](../CONTRIBUTING.md)**.
+
+User install path: **[SETUP.md](../SETUP.md)**. Local notes: **[DEVELOPMENT.md](DEVELOPMENT.md)**.
 
 ## Quick start (GUI from source)
 

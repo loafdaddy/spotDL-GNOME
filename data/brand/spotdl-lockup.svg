@@ -1,43 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="160" viewBox="0 0 720 160" role="img" aria-label="spotDL.">
+<svg xmlns="http://www.w3.org/2000/svg" width="458" height="160" viewBox="0 0 458 160" role="img" aria-label="spotDL.">
   <defs>
     <linearGradient id="bg" x1="18%" y1="0%" x2="82%" y2="100%">
       <stop offset="0%" stop-color="#163528"/>
       <stop offset="55%" stop-color="#0F241C"/>
       <stop offset="100%" stop-color="#0A1612"/>
     </linearGradient>
+    <linearGradient id="ring" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7AEEA0"/>
+      <stop offset="45%" stop-color="#22D662"/>
+      <stop offset="100%" stop-color="#149A45"/>
+    </linearGradient>
+    <linearGradient id="hand" x1="30%" y1="10%" x2="70%" y2="90%">
+      <stop offset="0%" stop-color="#F4FFF8"/>
+      <stop offset="100%" stop-color="#C8F5D8"/>
+    </linearGradient>
   </defs>
 
   <!-- Mark -->
   <g transform="translate(16,16)">
     <rect width="128" height="128" rx="30" fill="url(#bg)"/>
-    <circle cx="64" cy="64" r="42" fill="#22D662" opacity="0.12"/>
-    <circle cx="64" cy="64" r="36" fill="none" stroke="#22D662" stroke-width="8"/>
+    <circle cx="64" cy="64" r="44" fill="#22D662" opacity="0.08"/>
+    <circle cx="64" cy="64" r="36" fill="none" stroke="url(#ring)" stroke-width="8"/>
     <path
       fill="none"
-      stroke="#F4FFF8"
+      stroke="url(#hand)"
       stroke-width="8"
       stroke-linecap="round"
       stroke-linejoin="round"
       d="M64 34a30 30 0 1 1-21.2 8.8"/>
-    <line x1="64" y1="34" x2="64" y2="64" stroke="#F4FFF8" stroke-width="8" stroke-linecap="round"/>
-    <polyline points="54,54 64,64 74,54" fill="none" stroke="#F4FFF8" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="64" y1="34" x2="64" y2="64" stroke="url(#hand)" stroke-width="8" stroke-linecap="round"/>
+    <polyline points="54,54 64,64 74,54" fill="none" stroke="url(#hand)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
 
-  <!-- Wordmark: period spaced like Cadence. (period after the name, not tight) -->
-  <text
-    x="168"
-    y="102"
-    fill="#F4FFF8"
-    font-family="Iowan Old Style, Palatino Linotype, Palatino, Book Antiqua, Georgia, serif"
-    font-size="72"
-    font-weight="600"
-    letter-spacing="1.5">spotDL</text>
-  <text
-    x="478"
-    y="102"
-    fill="#22D662"
-    font-family="Iowan Old Style, Palatino Linotype, Palatino, Book Antiqua, Georgia, serif"
-    font-size="72"
-    font-weight="600">.</text>
+  <!-- Wordmark: Cantarell Extra Bold (GNOME) as outlines; period at natural advance -->
+  <path fill-rule="nonzero" fill="#F4FFF8" d="M184.848 102.72C195.504 102.72 201.552 98.328 201.552 90.696C201.552 81.984 193.704 80.616 188.088 79.68C185.064 79.104 182.688 78.744 182.688 77.304C182.688 76.08 184.416 75.36 187.872 75.36C190.68 75.36 194.136 75.864 197.664 76.728L200.04 67.728C196.584 66.648 191.904 66 187.656 66C176.712 66 170.808 70.176 170.808 77.88C170.808 86.592 178.368 87.744 183.768 88.608C186.864 89.112 189.24 89.472 189.24 91.056C189.24 92.424 187.296 93.36 184.2 93.36C181.104 93.36 176.64 92.496 172.968 91.2L170.304 100.056C174.336 101.712 179.736 102.72 184.848 102.72ZM227.688 102.72C236.976 102.72 243.96 94.728 243.96 83.928C243.96 73.488 237.408 66 228.336 66C224.016 66 220.488 67.728 217.968 70.824L216.24 66.72H207.96V117.624H219.84V100.2C222 101.856 224.664 102.72 227.688 102.72ZM219.84 90.12V78.384C221.064 77.088 222.792 76.368 224.736 76.368C228.768 76.368 231.288 79.392 231.288 84.576C231.288 89.472 228.984 92.352 225.024 92.352C223.008 92.352 221.136 91.56 219.84 90.12ZM267.216 102.72C279.024 102.72 286.944 95.088 286.944 83.712C286.944 72.984 279.744 66 268.512 66C256.632 66 248.712 73.632 248.712 85.08C248.712 95.736 255.912 102.72 267.216 102.72ZM268.008 92.352C263.832 92.352 261.384 89.328 261.384 84.288C261.384 79.32 263.688 76.368 267.648 76.368C271.824 76.368 274.272 79.464 274.272 84.72C274.272 89.544 271.968 92.352 268.008 92.352ZM309.552 102.576C312 102.576 314.736 102.216 317.544 101.424L315.168 92.64C314.232 93 313.224 93.144 312.288 93.144C309.264 93.144 307.464 91.56 307.464 88.968V76.44H315.6V66.72H307.464V56.568H295.224V66.72H290.184V76.44H295.224V89.328C295.224 97.68 300.408 102.576 309.552 102.576ZM323.592 102H341.376C358.512 102 369.816 91.704 369.816 76.008C369.816 60.96 359.592 52.032 342.312 52.032H323.592ZM335.832 91.272V62.76H341.592C351.168 62.76 356.856 68.232 356.856 77.448C356.856 86.376 351.888 91.272 342.816 91.272ZM377.592 102H410.712V90.984H390.048V52.032H377.592Z"/>
+  <path fill-rule="nonzero" fill="#22D662" d="M422.952 102.72C427.56 102.72 430.584 99.408 430.584 95.088C430.584 90.48 427.56 87.168 422.952 87.168C418.344 87.168 415.32 90.48 415.32 95.088C415.32 99.408 418.344 102.72 422.952 102.72Z"/>
 </svg>

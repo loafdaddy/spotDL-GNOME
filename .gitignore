@@ -145,3 +145,5 @@ temp/
 # VS Code
 .vscode
 *.txt
+
+.venv-gui/

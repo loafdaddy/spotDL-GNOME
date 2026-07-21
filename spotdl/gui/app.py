@@ -14,16 +14,18 @@ gi.require_version("Adw", "1")
 from gi.repository import Adw, Gio, Gtk  # noqa: E402
 
 from spotdl._version import __version__  # noqa: E402
+from spotdl.gui.identity import APP_ID, APP_NAME, APP_VERSION  # noqa: E402
 from spotdl.gui.window import SpotdlWindow  # noqa: E402
 
 logger = logging.getLogger(__name__)
 
 __all__ = ["SpotdlApplication", "APP_ID", "APP_NAME", "APP_VERSION"]
 
-APP_ID = "io.github.loafdaddy.SpotdlGnome"
-APP_NAME = "spotDL"
-# Fork / Flatpak release version (engine version remains spotdl.__version__).
-APP_VERSION = "0.2.1"
+_BRAND_CSS = """
+.spotdl-suggested {
+  font-weight: 600;
+}
+"""
 
 
 class SpotdlApplication(Adw.Application):
@@ -41,10 +43,30 @@ class SpotdlApplication(Adw.Application):
         """Set up application-wide actions and accelerators."""
 
         Adw.Application.do_startup(self)
+        self._install_brand_css()
 
         self._add_action("preferences", self._on_preferences, ["<primary>comma"])
         self._add_action("about", self._on_about)
         self._add_action("quit", lambda *_: self.quit(), ["<primary>q"])
+
+    def _install_brand_css(self) -> None:
+        """Load light brand-oriented CSS without fighting Adwaita colours."""
+
+        try:
+            provider = Gtk.CssProvider()
+            if hasattr(provider, "load_from_string"):
+                provider.load_from_string(_BRAND_CSS)
+            else:  # pragma: no cover - older GTK
+                provider.load_from_data(_BRAND_CSS.encode("utf-8"))
+            display = self.get_display()
+            if display is not None:
+                Gtk.StyleContext.add_provider_for_display(
+                    display,
+                    provider,
+                    Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION,
+                )
+        except Exception:  # pylint: disable=broad-except
+            logger.debug("Could not install brand CSS", exc_info=True)
 
     def do_activate(self) -> None:  # noqa: D401  pylint: disable=arguments-differ
         """Present the main window, creating it on first activation."""
@@ -70,7 +92,7 @@ class SpotdlApplication(Adw.Application):
 
     def _on_about(self, *_args: Any) -> None:
         about = Adw.AboutDialog(
-            application_name=APP_NAME,
+            application_name=f"{APP_NAME}.",
             application_icon=APP_ID,
             version=f"{APP_VERSION} (engine {__version__})",
             developer_name="loafdaddy",
@@ -88,5 +110,9 @@ class SpotdlApplication(Adw.Application):
         )
         about.add_credit_section(
             "Play with", ["Cadence https://github.com/loafdaddy/Cadence-Music"]
+        )
+        about.add_link(
+            "Brand kit",
+            "https://github.com/loafdaddy/spotDL-GNOME/tree/main/data/brand",
         )
         about.present(self.window)

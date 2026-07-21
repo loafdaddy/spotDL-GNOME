@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-label="spotDL. social banner">
+  <defs>
+    <linearGradient id="page" x1="10%" y1="0%" x2="90%" y2="100%">
+      <stop offset="0%" stop-color="#12281F"/>
+      <stop offset="55%" stop-color="#0C1A14"/>
+      <stop offset="100%" stop-color="#07110D"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="50%" y1="20%" x2="50%" y2="90%">
+      <stop offset="0%" stop-color="#22D662" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#22D662" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="bg" x1="18%" y1="0%" x2="82%" y2="100%">
+      <stop offset="0%" stop-color="#163528"/>
+      <stop offset="55%" stop-color="#0F241C"/>
+      <stop offset="100%" stop-color="#0A1612"/>
+    </linearGradient>
+    <linearGradient id="ring" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7AEEA0"/>
+      <stop offset="45%" stop-color="#22D662"/>
+      <stop offset="100%" stop-color="#149A45"/>
+    </linearGradient>
+    <linearGradient id="hand" x1="30%" y1="10%" x2="70%" y2="90%">
+      <stop offset="0%" stop-color="#F4FFF8"/>
+      <stop offset="100%" stop-color="#C8F5D8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="640" fill="url(#page)"/>
+  <ellipse cx="640" cy="280" rx="420" ry="220" fill="url(#glow)"/>
+
+  <!-- Large mark -->
+  <g transform="translate(512,96) scale(2)">
+    <rect width="128" height="128" rx="30" fill="url(#bg)"/>
+    <circle cx="64" cy="64" r="44" fill="#22D662" opacity="0.08"/>
+    <circle cx="64" cy="64" r="36" fill="none" stroke="url(#ring)" stroke-width="8"/>
+    <path
+      fill="none"
+      stroke="url(#hand)"
+      stroke-width="8"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      d="M64 34a30 30 0 1 1-21.2 8.8"/>
+    <line x1="64" y1="34" x2="64" y2="64" stroke="url(#hand)" stroke-width="8" stroke-linecap="round"/>
+    <polyline points="54,54 64,64 74,54" fill="none" stroke="url(#hand)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Wordmark: Cantarell Extra Bold outlines, centred -->
+  <path fill-rule="nonzero" fill="#F4FFF8" d="M524.224 460.72C534.88 460.72 540.928 456.328 540.928 448.696C540.928 439.984 533.08 438.616 527.464 437.68C524.44 437.104 522.064 436.744 522.064 435.304C522.064 434.08 523.792 433.36 527.248 433.36C530.056 433.36 533.512 433.864 537.04 434.728L539.416 425.728C535.96 424.648 531.28 424 527.032 424C516.088 424 510.184 428.176 510.184 435.88C510.184 444.592 517.744 445.744 523.144 446.608C526.24 447.112 528.616 447.472 528.616 449.056C528.616 450.424 526.672 451.36 523.576 451.36C520.48 451.36 516.016 450.496 512.344 449.2L509.68 458.056C513.712 459.712 519.112 460.72 524.224 460.72ZM567.064 460.72C576.352 460.72 583.336 452.728 583.336 441.928C583.336 431.488 576.784 424 567.712 424C563.392 424 559.864 425.728 557.344 428.824L555.616 424.72H547.336V475.624H559.216V458.2C561.376 459.856 564.04 460.72 567.064 460.72ZM559.216 448.12V436.384C560.44 435.088 562.168 434.368 564.112 434.368C568.144 434.368 570.664 437.392 570.664 442.576C570.664 447.472 568.36 450.352 564.4 450.352C562.384 450.352 560.512 449.56 559.216 448.12ZM606.592 460.72C618.4 460.72 626.32 453.088 626.32 441.712C626.32 430.984 619.12 424 607.888 424C596.008 424 588.088 431.632 588.088 443.08C588.088 453.736 595.288 460.72 606.592 460.72ZM607.384 450.352C603.208 450.352 600.76 447.328 600.76 442.288C600.76 437.32 603.064 434.368 607.024 434.368C611.2 434.368 613.648 437.464 613.648 442.72C613.648 447.544 611.344 450.352 607.384 450.352ZM648.928 460.576C651.376 460.576 654.112 460.216 656.92 459.424L654.544 450.64C653.608 451 652.6 451.144 651.664 451.144C648.64 451.144 646.84 449.56 646.84 446.968V434.44H654.976V424.72H646.84V414.568H634.6V424.72H629.56V434.44H634.6V447.328C634.6 455.68 639.784 460.576 648.928 460.576ZM662.968 460H680.752C697.888 460 709.192 449.704 709.192 434.008C709.192 418.96 698.968 410.032 681.688 410.032H662.968ZM675.208 449.272V420.76H680.968C690.544 420.76 696.232 426.232 696.232 435.448C696.232 444.376 691.264 449.272 682.192 449.272ZM716.968 460H750.088V448.984H729.424V410.032H716.968Z"/>
+  <path fill-rule="nonzero" fill="#22D662" d="M762.328 460.72C766.936 460.72 769.96 457.408 769.96 453.088C769.96 448.48 766.936 445.168 762.328 445.168C757.72 445.168 754.696 448.48 754.696 453.088C754.696 457.408 757.72 460.72 762.328 460.72Z"/>
+
+  <text
+    x="640"
+    y="530"
+    text-anchor="middle"
+    fill="#A8D4B8"
+    font-family="Cantarell, Adwaita Sans, Inter, system-ui, sans-serif"
+    font-size="28"
+    font-weight="500">Native GNOME music downloads for Linux</text>
+</svg>
