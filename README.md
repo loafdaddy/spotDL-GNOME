@@ -17,7 +17,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/loafdaddy/spotDL-GNOME/releases/tag/v0.2.1">v0.2.1</a>
+  <a href="https://github.com/loafdaddy/spotDL-GNOME/releases/tag/v0.2.2">v0.2.2</a>
   ·
   <a href="SETUP.md">Setup</a>
   ·

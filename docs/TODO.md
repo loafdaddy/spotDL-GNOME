@@ -13,6 +13,7 @@ Related: [ARCHITECTURE.md](ARCHITECTURE.md) · [ROADMAP.md](ROADMAP.md) · [RELE
 - [x] In-app branding (home, welcome, About)
 - [x] Discoverr-family docs structure (SETUP, FAQ, ROADMAP, TODO, ARCHITECTURE)
 - [x] GNOME 50 Flatpak runtime (v0.2.1)
+- [x] Brand/docs polish + Cadence removal (v0.2.2)
 - [x] Document playback via an external music library
 
 ## Next

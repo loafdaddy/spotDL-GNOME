@@ -20,6 +20,7 @@ Stay a **small native GNOME downloader**: paste Spotify links, get organised fil
 - **v0.1.0** — first Flatpak GUI — see [RELEASES.md](RELEASES.md)
 - **v0.2.0** — brand + in-app chrome + docs polish — see [RELEASES.md](RELEASES.md)
 - **v0.2.1** — GNOME 50 runtime — see [RELEASES.md](RELEASES.md)
+- **v0.2.2** — brand/docs polish — see [RELEASES.md](RELEASES.md)
 - **Next** — items under **Next** in [TODO.md](TODO.md)
 
 ## Non-goals (for now)

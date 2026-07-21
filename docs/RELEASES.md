@@ -2,7 +2,7 @@
 
 Track every published version here. Update this file when cutting a release, then tag and publish on GitHub.
 
-Current fork version in tree: **0.2.1** (`spotdl/gui/identity.py` `APP_VERSION` + AppStream metainfo).  
+Current fork version in tree: **0.2.2** (`spotdl/gui/identity.py` `APP_VERSION` + AppStream metainfo).  
 Upstream engine version: **4.5.0** (`pyproject.toml` / `spotdl/_version.py`).
 
 ## Versioning
@@ -23,21 +23,26 @@ The spotDL **engine** version stays aligned with upstream when vendored/synced; 
 2. Add a matching `<release>` entry in `packaging/flatpak/io.github.loafdaddy.SpotdlGnome.metainfo.xml`
 3. Add a section below in this file; update README version links if needed
 4. Commit on `main`
-5. Tag: `git tag -a v0.2.1 -m "spotDL GNOME 0.2.1"`
+5. Tag: `git tag -a v0.2.2 -m "spotDL GNOME 0.2.2"`
 6. Push: `git push origin main --tags`
 7. Create / update the GitHub release (notes can mirror the section below)
 8. The `flatpak-release` workflow builds `io.github.loafdaddy.SpotdlGnome.flatpak` and attaches it to the tag release
 
 ## Releases
 
-### Unreleased — Discoverr-family polish
+### 0.2.2 — 2026-07-21
 
-**Status:** on branch · not tagged yet
+**Status:** early build · not on Flathub yet
 
 **Highlights**
 - Brand kit elevated to Discoverr studio language (Cantarell Extra Bold lockup, gradients, social banner)
-- Docs reorganised: `SETUP.md`, `docs/README.md`, FAQ / Configuration / Architecture / Roadmap / TODO
 - In-app branding uses the bundled mark (`spotdl/gui/assets/`) so from-source runs still show the icon
+- Docs reorganised: `SETUP.md`, `docs/README.md`, FAQ / Configuration / Architecture / Roadmap / TODO
+- Removed Cadence references; playback is via any external music library
+
+**Install**
+- Flatpak bundle from the [GitHub release](https://github.com/loafdaddy/spotDL-GNOME/releases/tag/v0.2.2)
+- Or build: `./packaging/flatpak/build.sh` then `flatpak run io.github.loafdaddy.SpotdlGnome`
 
 ### 0.2.1 — 2026-07-19
 

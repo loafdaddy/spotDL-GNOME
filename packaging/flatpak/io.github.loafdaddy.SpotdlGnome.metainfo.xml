@@ -48,6 +48,17 @@
   <content_rating type="oars-1.1"/>
 
   <releases>
+    <release version="0.2.2" date="2026-07-21">
+      <description>
+        <p>Brand and documentation polish.</p>
+        <ul>
+          <li>Discoverr-family brand kit (lockup, mark, social banner)</li>
+          <li>Bundled in-app mark for from-source runs</li>
+          <li>Docs reorganised (SETUP, FAQ, Configuration, Architecture, Roadmap)</li>
+          <li>Remove Cadence references; playback via any music library</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.2.1" date="2026-07-19">
       <description>
         <p>Flatpak runtime update to GNOME 50.</p>
