@@ -36,7 +36,13 @@ No for the desktop app. Docker notes in [installation.md](installation.md) are f
 ## Legal
 
 **Is downloading allowed?**  
-Users are responsible for their actions and any potential legal consequences. We do not support unauthorised downloading of copyrighted material.
+It depends on *what* you download. The software itself is open source and has legitimate non-infringing uses (for example, royalty-free or public-domain music you are allowed to obtain). Open source is not a license to pirate. Downloading copyrighted tracks without permission from the rights holders is copyright infringement in most jurisdictions.
+
+Using spotDL may also breach Spotify’s and YouTube’s terms of service (automated access / scraping / extracting content, and downloading streams without an authorized download link or permission). Spotify metadata may come from their public API; audio is matched and fetched from YouTube and backup sources — that is not the same as an authorized download path from those platforms.
+
+Users are responsible for their actions and any potential legal consequences. We do not support unauthorised downloading of copyrighted material and take no responsibility for user actions. Only download content you have the right to obtain.
+
+See also [README.md](../README.md#music-sourcing--legal) and [index.md](index.md#music-sourcing--legal).
 
 ## Contributing
 
