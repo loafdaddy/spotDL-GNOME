@@ -29,7 +29,7 @@ Templates use spotDL formatter tokens. Examples:
 {artists}/{title}.{output-ext}
 ```
 
-Keep templates simple until you know your library player’s expectations. [Cadence](https://github.com/loafdaddy/Cadence-Music) works well with artist/album folders.
+Keep templates simple until you know your library player’s expectations. Artist/album folders work well with most library apps.
 
 ---
 

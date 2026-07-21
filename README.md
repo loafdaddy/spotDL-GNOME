@@ -26,8 +26,6 @@
   <a href="CONTRIBUTING.md">Contributing</a>
   ·
   <a href="docs/README.md">Docs index</a>
-  ·
-  <a href="https://github.com/loafdaddy/Cadence-Music">Play with Cadence</a>
 </p>
 
 spotDL finds songs from your Spotify tracks, albums, and playlists on YouTube and downloads them — complete with album art, lyrics, and metadata. This Linux fork wraps the [spotDL](https://github.com/spotDL/spotify-downloader) engine in a native **GTK 4 / libadwaita** interface, packaged as a self-contained **Flatpak**.
@@ -38,7 +36,7 @@ Built to feel like it ships with Fedora Workstation: Wayland-first, Flatpak-frie
 
 Most Spotify download tools are CLIs or Electron shells. spotDL gives you a calm native GNOME window: paste a link, watch progress, retry failures, and keep downloads organised for a music library.
 
-> Paste a Spotify link → download organised files → play them in [Cadence](https://github.com/loafdaddy/Cadence-Music).
+> Paste a Spotify link → download organised files → play them in your music library.
 
 ## Features
 
@@ -114,7 +112,7 @@ Examples and defaults: [docs/CONFIGURATION.md](docs/CONFIGURATION.md).
 2. Paste a Spotify URL (or try a name search — experimental).
 3. Press **Download**.
 4. Open the finished folder from the toast, or browse **History**.
-5. Play files in [Cadence](https://github.com/loafdaddy/Cadence-Music) (or any library player).
+5. Play files in your music library or any local player.
 
 CLI engine notes inherited from upstream: [docs/usage.md](docs/usage.md).
 
@@ -144,7 +142,7 @@ spotDL uses YouTube (and backup sources) for downloads. The highest available bi
 ## FAQ
 
 **Does spotDL play music?**  
-No. It downloads and tags files. Use [Cadence](https://github.com/loafdaddy/Cadence-Music) or another player for your library.
+No. It downloads and tags files. Use your preferred music library or player.
 
 **Is free-text search supported?**  
 Experimental. Pasting a Spotify link is the reliable flow.
@@ -171,7 +169,7 @@ Parts of this fork — including the GTK GUI, Flatpak packaging, docs, and brand
 
 ## Credits
 
-Built on the [spotDL](https://github.com/spotDL/spotify-downloader) engine. Sibling player: [Cadence](https://github.com/loafdaddy/Cadence-Music). Same studio family as [Discoverr](https://github.com/loafdaddy/discoverr-bot).
+Built on the [spotDL](https://github.com/spotDL/spotify-downloader) engine. Same studio family as [Discoverr](https://github.com/loafdaddy/discoverr-bot).
 
 ## License
 

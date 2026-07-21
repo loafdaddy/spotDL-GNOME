@@ -1,6 +1,6 @@
 # spotDL brand
 
-Visual direction: dark, calm, green accent — download signal with an original clock-arrow mark. Sibling feel to Discoverr and Cadence (dark + accent period), distinct palette.
+Visual direction: dark, calm, green accent — download signal with an original clock-arrow mark. Sibling feel to Discoverr (dark + accent period), distinct palette.
 
 | File | Use |
 |------|-----|
@@ -38,7 +38,7 @@ Fallback stack if you re-edit as live text: `Cantarell Extra Bold, Cantarell, Ad
 - Prefer the **lockup** in README heroes and marketing.
 - Prefer the **mark** alone for app icons, About dialogs, small UI chrome, and square crops.
 - Prefer the **social banner** for repository social preview / OG images.
-- Do not recolor the accent to teal (Discoverr) or purple (Cadence) — those are sibling brands.
+- Do not recolor the accent to teal (Discoverr) — keep spotDL’s green identity.
 - Export PNG from the SVG if a host does not accept SVG uploads.
 
 The scalable Flatpak/desktop icon matches `spotdl-mark.svg`.

@@ -30,7 +30,7 @@
     </ul>
     <p>
       Built on the spotDL command line engine. FFmpeg and Deno are bundled.
-      Play downloads with Cadence, a sibling native Linux music library.
+      Play downloads with your preferred music library or player.
     </p>
   </description>
 
@@ -59,11 +59,11 @@
     </release>
     <release version="0.2.0" date="2026-07-19">
       <description>
-        <p>Branding, docs, and Cadence-aligned release process.</p>
+        <p>Branding, docs, and release process polish.</p>
         <ul>
           <li>spotDL. wordmark and updated app icon</li>
           <li>In-app branding (home, welcome, About)</li>
-          <li>AI-friendly contributing guide and Cadence player link</li>
+          <li>AI-friendly contributing guide</li>
           <li>Default branch renamed to main; Linux-focused CI</li>
         </ul>
       </description>

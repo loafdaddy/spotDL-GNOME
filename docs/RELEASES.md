@@ -56,9 +56,9 @@ The spotDL **engine** version stays aligned with upstream when vendored/synced; 
 
 **Highlights**
 - spotDL. brand lockup and refreshed app icon (dark + green)
-- In-app branding: home status page, welcome dialog, About (links to spotDL-GNOME + Cadence)
-- README / docs / CONTRIBUTING aligned with Cadence style; AI-assisted contributions welcome
-- Link to [Cadence](https://github.com/loafdaddy/Cadence-Music) for playing downloads
+- In-app branding: home status page, welcome dialog, About (links to spotDL-GNOME)
+- README / docs / CONTRIBUTING polish; AI-assisted contributions welcome
+- Clarify that playback is via an external music library
 - Default branch `main`; Linux-only CI and docs build (no Pages deploy)
 
 **Install**

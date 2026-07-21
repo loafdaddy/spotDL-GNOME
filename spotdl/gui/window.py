@@ -311,7 +311,7 @@ class SpotdlWindow(Adw.ApplicationWindow):
         status_page.set_description(
             "Paste a Spotify track, album, or playlist link \u2014 "
             "or search by name \u2014 then press Download.\n"
-            "Play finished downloads in Cadence."
+            "Play finished downloads in your music library."
         )
         paintable = load_mark_paintable(128)
         if paintable is not None and hasattr(status_page, "set_paintable"):
@@ -383,7 +383,7 @@ class SpotdlWindow(Adw.ApplicationWindow):
                 "Before your first download, choose where music is saved and set "
                 "your format, quality, and how downloads are organised into "
                 "folders.\n\n"
-                "When you are done downloading, open Cadence to play your library.\n\n"
+                "When you are done downloading, open your music library to play the files.\n\n"
                 "You can change preferences any time from the menu."
             ),
         )

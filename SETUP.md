@@ -20,7 +20,7 @@ Overview: [README.md](README.md) · Configuration: [docs/CONFIGURATION.md](docs/
 | 1 | Install | App on your system |
 | 2 | First run | Welcome dialog + Preferences |
 | 3 | Download | A tagged file in your music folder |
-| 4 | Play | Library open in Cadence (optional) |
+| 4 | Play | Files open in your music library (optional) |
 
 ---
 
@@ -115,7 +115,7 @@ If a song fails, read the inline reason and use **Retry**. Backup audio sources 
 
 ## 4. Play your downloads
 
-spotDL does not include a player. Point **[Cadence](https://github.com/loafdaddy/Cadence-Music)** (or another library app) at the same folder you chose in Preferences.
+spotDL does not include a player. Point your music library or player at the same folder you chose in Preferences.
 
 ---
 

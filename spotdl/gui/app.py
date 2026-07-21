@@ -101,15 +101,11 @@ class SpotdlApplication(Adw.Application):
             license_type=Gtk.License.MIT_X11,
             comments=(
                 "A native GTK4 / libadwaita desktop app for Linux that downloads "
-                "music from Spotify. Built on the spotDL engine. Play downloads "
-                "with Cadence."
+                "music from Spotify. Built on the spotDL engine."
             ),
         )
         about.add_credit_section(
             "Based on", ["spotDL https://github.com/spotDL/spotify-downloader"]
-        )
-        about.add_credit_section(
-            "Play with", ["Cadence https://github.com/loafdaddy/Cadence-Music"]
         )
         about.add_link(
             "Brand kit",

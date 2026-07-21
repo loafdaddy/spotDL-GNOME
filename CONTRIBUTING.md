@@ -68,8 +68,6 @@ Typical change flow:
 | `docs/` | Product docs + MkDocs site |
 | `docs/assets/` | README screenshots |
 
-Play downloaded music with **[Cadence](https://github.com/loafdaddy/Cadence-Music)** — a sibling native Linux player.
-
 ## Releases
 
 When shipping a version, follow [docs/RELEASES.md](docs/RELEASES.md): bump `APP_VERSION` in `spotdl/gui/identity.py`, update AppStream metainfo, add a release section, tag `vX.Y.Z`, and publish a GitHub release. Keep [docs/TODO.md](docs/TODO.md) honest.
@@ -81,7 +79,7 @@ When shipping a version, follow [docs/RELEASES.md](docs/RELEASES.md): bump `APP_
 - Avoid drive-by refactors unrelated to the change
 - No emoji in **UI strings**; README marketing may use light emoji like sibling projects
 - Do not document `pip install` as the operator path — Flatpak is the product runtime
-- Keep brand accent green (`#22D662`); do not recolor toward Discoverr teal or Cadence purple
+- Keep brand accent green (`#22D662`); do not recolor toward Discoverr teal
 - MIT license for contributions (same as the project)
 
 ## What helps most

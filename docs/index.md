@@ -12,14 +12,12 @@ GTK4 · libadwaita · Flatpak · Linux
 [Contributing](../CONTRIBUTING.md)
 ·
 [Docs index](README.md)
-·
-[Play with Cadence](https://github.com/loafdaddy/Cadence-Music)
 
 spotDL finds songs from your Spotify tracks, albums, and playlists on YouTube and downloads them — complete with album art, lyrics, and metadata. This Linux fork wraps the [spotDL](https://github.com/spotDL/spotify-downloader) engine in a native **GTK 4 / libadwaita** interface, packaged as a self-contained **Flatpak**.
 
 Built to feel like it ships with Fedora Workstation: Wayland-first, Flatpak-friendly, no Electron.
 
-> Paste a Spotify link → download organised files → play them in [Cadence](https://github.com/loafdaddy/Cadence-Music).
+> Paste a Spotify link → download organised files → play them in your music library.
 
 ## Try it
 
@@ -51,7 +49,7 @@ spotDL uses YouTube (and backup sources) for downloads.
 
 ## Credits
 
-Built on [spotDL](https://github.com/spotDL/spotify-downloader). Sibling player: [Cadence](https://github.com/loafdaddy/Cadence-Music).
+Built on [spotDL](https://github.com/spotDL/spotify-downloader).
 
 ## License
 

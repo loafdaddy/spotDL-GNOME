@@ -41,4 +41,4 @@ User pastes Spotify URL
 
 ## Branding
 
-Studio family with Discoverr (teal) and Cadence (purple): dark base, accent period wordmark, Cantarell Extra Bold lockup. spotDL’s accent is green (`#22D662`). Details: [data/brand/README.md](../data/brand/README.md).
+Studio family with Discoverr (teal): dark base, accent period wordmark, Cantarell Extra Bold lockup. spotDL’s accent is green (`#22D662`). Details: [data/brand/README.md](../data/brand/README.md).

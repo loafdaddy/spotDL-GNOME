@@ -36,9 +36,9 @@ Branch from `main`, keep PRs focused, and open against `main`.
 
 Full expectations: [AI-assisted contributions](https://github.com/loafdaddy/spotDL-GNOME/blob/main/CONTRIBUTING.md#ai-assisted-contributions).
 
-## Play downloads in Cadence
+## Play downloads
 
-After downloading, use **[Cadence](https://github.com/loafdaddy/Cadence-Music)** to play your library on Linux.
+After downloading, open the files in your preferred music library or player.
 
 ## Communication
 

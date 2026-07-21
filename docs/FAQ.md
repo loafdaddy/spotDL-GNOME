@@ -3,7 +3,7 @@
 ## Product
 
 **Does spotDL play music?**  
-No. It downloads and tags files. Use [Cadence](https://github.com/loafdaddy/Cadence-Music) or another library player.
+No. It downloads and tags files. Use your preferred music library or player.
 
 **Is this the upstream spotDL project?**  
 This repository is a **Linux / GNOME Flatpak fork** with a native GTK UI. The download engine comes from [spotDL/spotify-downloader](https://github.com/spotDL/spotify-downloader).
